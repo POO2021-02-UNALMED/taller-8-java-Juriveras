@@ -46,11 +46,9 @@ public class Futbolista implements Comparable<Object> {
 	}
 	
 	public boolean equals(Futbolista f) {
-		if(this.getNombre().equals(f.getNombre()) && this.getEdad() == f.getEdad() && 
-				this.getPosicion().equals(f.getPosicion())) {
+		if(this.hashCode() == f.hashCode()) {
 			return true;
 		}
-		
 		return false;
 	}
 	
