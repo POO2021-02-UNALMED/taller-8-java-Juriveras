@@ -41,7 +41,7 @@ public class Futbolista implements Comparable<Futbolista> {
 	}
 	
 	public String toString() {
-		return "El futbolista " + getNombre() + " tiene " + getEdad() + " y juega de " + 
+		return "El futbolista " + getNombre() + " tiene " + getEdad() + ", y juega de " + 
 				getPosicion();
 	}
 	
@@ -54,5 +54,17 @@ public class Futbolista implements Comparable<Futbolista> {
 		return false;
 	}
 	
-	boolean jugarConLasManos();
+	public boolean jugarConLasManos() {
+		if(this instanceof Portero) {
+			return true;
+		}
+		
+		return false;
+	}
+
+	@Override
+	public int compareTo(Futbolista o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
